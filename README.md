@@ -24,9 +24,9 @@ YÊU CẦU:
 
 
 BÀI LÀM
-###1. Tạo DATABASE mới: 
+## 1. Tạo DATABASE mới
 ![Không có tiêu đề](https://github.com/user-attachments/assets/8ec894f9-2f64-4706-84e7-267165dd2010)
-2. Tạo bảng Sinh Viên (Masv, Hoten, Ngaysinh):
+## 2. Tạo bảng Sinh Viên (Masv, Hoten, Ngaysinh)
 ![image](https://github.com/user-attachments/assets/50211104-17ab-44e2-a44a-da905a284939)
 *Lưu bảng với tên Sinhvien:
 ![image](https://github.com/user-attachments/assets/201831df-9f7e-4de2-b49f-12a3cb10dcc8)
@@ -49,7 +49,11 @@ BÀI LÀM
 + Tạo bảng DKMH (#@MaLopHP,#@MaSV,DiemTP,DiemThi,PhanTramThi):
 ![image](https://github.com/user-attachments/assets/33033a36-28cc-44ec-9d30-5394ace1f12e)
 
-3. 
+## 3. Thiết lập PK, FK(s) và CK(s)
+![khoachinh](https://github.com/user-attachments/assets/42fd4b70-2735-43af-969a-6f2c447a490e)
+Lưu ý: Khoá chính không cho phép giá trị null.
+
+
 
 
 
