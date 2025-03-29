@@ -60,34 +60,13 @@
 + Bảng Diem:
 ![image](https://github.com/user-attachments/assets/ebab80b8-e142-4f84-aca5-678169a5a8de)
 
+- Tạo Diagram:
+![Không có tiêu đề](https://github.com/user-attachments/assets/75e75368-d023-4704-9849-42b35e75a6a5)
+
+
+
 # 3. Viết lệnh truy vấn để: Tính được điểm thành phần của 1 sinh viên đang học tại 1 lớp học phần
-```sql
-  SELECT 
-  
-      DKMH.MaSV MSSV, 
-      
-      LopHP.MaLopHP [Mã lớp HP], 
-      
-      LopHP.TenLopHP [Tên lớp HP], 
-      
-      DKMH.DiemThi [Điểm thi], 
-      
-      DKMH.PhanTramThi [Phần trăm thi], 
-      
-  	  COUNT(Diem.diem) AS [Số điểm thành phần],
-   
-      AVG(Diem.diem) AS [Điểm thành phần]
-      
-  FROM DKMH
-  
-  LEFT JOIN Diem ON DKMH.id_dk = Diem.id_dk
-  
-  JOIN LopHP ON DKMH.MaLopHP = LopHP.MaLopHP
-  
-  GROUP BY DKMH.MaSV, LopHP.MaLopHP, LopHP.TenLopHP, DKMH.DiemThi, DKMH.PhanTramThi
-  
-  ORDER BY LopHP.MaLopHP;
-```
+
 
 
 
