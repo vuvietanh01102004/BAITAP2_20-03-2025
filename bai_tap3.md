@@ -66,6 +66,48 @@
 
 
 # 3. Viết lệnh truy vấn để: Tính được điểm thành phần của 1 sinh viên đang học tại 1 lớp học phần
+```sql
+SELECT 
+
+    DKMH.MaSV AS [Mã số sinh viên], 
+
+    LopHP.MaLopHP AS [Mã học phần], 
+
+    LopHP.TenLopHP AS [Tên học phần], 
+
+    DKMH.DiemThi AS [Điểm bài thi], 
+
+    DKMH.PhanTramThi AS [Tỷ lệ bài thi], 
+
+    COUNT(Diem.diem) AS [Tổng số điểm], 
+
+    COALESCE(AVG(Diem.diem), 0) AS [Điểm trung bình thành phần]
+
+FROM DKMH
+
+FULL OUTER JOIN Diem ON DKMH.id_dk = Diem.id_dk
+
+INNER JOIN LopHP ON LopHP.MaLopHP = DKMH.MaLopHP
+
+GROUP BY 
+
+    DKMH.MaSV, 
+
+    LopHP.MaLopHP, 
+
+    LopHP.TenLopHP, 
+
+    DKMH.DiemThi, 
+
+    DKMH.PhanTramThi
+
+ORDER BY 
+
+    LopHP.MaLopHP;
+```
+
+- Kết quả cho ra:
+![image](https://github.com/user-attachments/assets/9ea47967-ba9f-44c1-9e7b-07209523fc67)
 
 
 
